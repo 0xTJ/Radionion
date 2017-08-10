@@ -4,14 +4,14 @@ var oledExp = require("/usr/bin/node-oled-exp");
 
 var streamURL = "http://streaming.radionomy.com/PassionLoveRadio";
 
-//exec('wget -O - ' + streamURL + ' | madplay	-', (error, stdout, stderr) => {
-//	if (error) {
-//		console.error(`exec error: ${error}`);
-//		return;
-//	}
-//	console.log(`stdout: ${stdout}`);
-//	console.log(`stderr: ${stderr}`);
-//});
+exec('wget -O - ' + streamURL + ' | madplay	-', (error, stdout, stderr) => {
+	if (error) {
+		console.error(`exec error: ${error}`);
+		return;
+	}
+	console.log(`stdout: ${stdout}`);
+	console.log(`stderr: ${stderr}`);
+});
 
 oledExp.init();
 oledExp.setColumnAddressing(63,95);
